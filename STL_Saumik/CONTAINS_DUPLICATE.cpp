@@ -1,0 +1,16 @@
+// https://leetcode.com/problems/contains-duplicate/description/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        map<int,int> mpp;
+        for(int i : nums){
+            mpp[i]++;
+            if(mpp[i]>1)return true;
+        }
+        return false;
+    }
+};
